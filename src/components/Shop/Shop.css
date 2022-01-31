@@ -18,3 +18,16 @@
     margin-right: 7px;
     margin-left: 50px;
 }
+.pagination{
+    margin:30px ;
+}
+.pagination button{
+    padding:  1px 10px;
+    margin-right:20px ;
+}
+.pagination .selected{
+  background: rgb(255, 124, 1);
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+}

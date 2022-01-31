@@ -7,15 +7,17 @@ import {Link} from 'react-router-dom'
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  
   // Products to be render on the UI
   const [displayProducts, setDisplayProducts] = useState([]);
 
   useEffect(() => {
-    fetch("./products.JSON")
+    fetch(`https://evening-meadow-07425.herokuapp.com/products`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
         setDisplayProducts(data);
+        
       });
   }, []);
 
@@ -80,6 +82,8 @@ const Shop = () => {
               handleAddToCart={handleAddToCart}
             ></Product>
           ))}
+
+        
         </div>
         <div className="cart-container">
           <Cart cart={cart}>
